@@ -1,6 +1,6 @@
 # eXist-db Set Password Utility
 
-[![Build Status](https://github.com/evolvedbinary/existdb-set-password/actions/workflows/ci-build.yml/badge.svg?branch=develop)](https://github.com/evolvedbinary/existdb-set-password/actions/workflows/ci.yml)
+[![Build Status](https://github.com/evolvedbinary/existdb-set-password/actions/workflows/ci.yml/badge.svg)](https://github.com/evolvedbinary/existdb-set-password/actions/workflows/ci.yml)
 [![Java 17](https://img.shields.io/badge/java-17-blue.svg)](https://adoptopenjdk.net/)
 [![License](https://img.shields.io/badge/license-GPL%203.0-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 
