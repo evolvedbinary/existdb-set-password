@@ -263,4 +263,71 @@
         </dependencies>
     </dependencyManagement>
 
+    <repositories>
+        <repository>
+            <id>exist-db-snapshots</id>
+            <name>Evolved Binary - eXist-db Snapshots</name>
+            <url>https://repo.evolvedbinary.com/repository/exist-db-snapshots/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>exist-db</id>
+            <name>Evolved Binary - eXist-db Releases</name>
+            <url>https://repo.evolvedbinary.com/repository/exist-db/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>clojars.org</id>
+            <url>https://clojars.org/repo</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>exist-db</id>
+            <name>Evolved Binary - eXist-db Releases</name>
+            <url>https://repo.evolvedbinary.com/repository/exist-db/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>exist-db-snapshots</id>
+            <name>Evolved Binary - eXist-db Snapshots</name>
+            <url>https://repo.evolvedbinary.com/repository/exist-db-snapshots/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>exist-db-snapshots</id>
+            <name>Evolved Binary - eXist-db Snapshots</name>
+            <url>https://repo.evolvedbinary.com/repository/exist-db-snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>sonatype-nexus-staging</id>
+            <name>Nexus Release Repository</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>   
+
 </project>
