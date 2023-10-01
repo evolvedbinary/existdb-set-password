@@ -1,5 +1,5 @@
 /*
- * existdb-set-password-version-6.x.x - Utility to set the password of an eXist-db user account.
+ * existdb-set-password - Utility to set the password of an eXist-db user account.
  * Copyright © 2023 Evolved Binary (hello@evolvedbinary.com)
  *
  * This program is free software: you can redistribute it and/or modify
