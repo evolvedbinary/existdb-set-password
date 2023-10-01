@@ -24,7 +24,7 @@ If you wish to build a version compatible with a different version of eXist-db, 
 Assuming that `$EXIST_HOME` points to an exist-db 6.x.x installation where you wish to change the password of the Admin user.
 
 ```bash
-existdb-set-passwprd-cli/target/appassembly/bin/existdb-set-password.sh \
+existdb-set-password-cli/target/appassembly/bin/existdb-set-password.sh \
     --existdb-version 6 \
     --existdb-conf $EXIST_HOME/etc/conf.xml
     --username admin --password MY-NEW-PASSWORD
