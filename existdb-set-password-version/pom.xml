@@ -45,8 +45,16 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <modules>
+                <module>existdb-set-password-version-5.x.x</module>
                 <module>existdb-set-password-version-6.x.x</module>
                 <module>existdb-set-password-version-7.x.x</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>5</id>
+            <modules>
+                <module>existdb-set-password-version-5.x.x</module>
             </modules>
         </profile>
 
