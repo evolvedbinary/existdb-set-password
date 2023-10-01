@@ -1,0 +1,16 @@
+name: Test
+on: [push, pull_request]
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: 17
+          cache: 'maven'
+      - name: Maven Test
+        run: mvn -V -B -DtrimStackTrace=false clean verify
