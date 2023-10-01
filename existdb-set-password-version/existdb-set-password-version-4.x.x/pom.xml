@@ -24,13 +24,11 @@
 
     <parent>
         <groupId>com.evolvedbinary.existdb.util</groupId>
-        <artifactId>existdb-set-password-parent</artifactId>
+        <artifactId>existdb-set-password-version</artifactId>
         <version>1.0.0-SNAPSHOT</version>
-        <relativePath>../existdb-set-password-parent</relativePath>
     </parent>
 
-    <artifactId>existdb-set-password-version</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>existdb-set-password-version-4.x.x</artifactId>
 
     <scm>
         <connection>scm:git:https://github.com/evolvedbinary/existdb-set-password.git</connection>
@@ -38,47 +36,42 @@
         <url>scm:git:https://github.com/evolvedbinary/existdb-set-password.git</url>
     </scm>
 
-    <profiles>
-        <profile>
-            <id>all</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <modules>
-                <module>existdb-set-password-version-4.x.x</module>
-                <module>existdb-set-password-version-5.x.x</module>
-                <module>existdb-set-password-version-6.x.x</module>
-                <module>existdb-set-password-version-7.x.x</module>
-            </modules>
-        </profile>
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>existdb-set-password-version-adapter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.exist-db</groupId>
+            <artifactId>exist-core</artifactId>
+            <version>4.11.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>jsr305</artifactId>
+        </dependency>
+    </dependencies>
 
-        <profile>
-            <id>4</id>
-            <modules>
-                <module>existdb-set-password-version-4.x.x</module>
-            </modules>
-        </profile>
-
-        <profile>
-            <id>5</id>
-            <modules>
-                <module>existdb-set-password-version-5.x.x</module>
-            </modules>
-        </profile>
-
-        <profile>
-            <id>6</id>
-            <modules>
-                <module>existdb-set-password-version-6.x.x</module>
-            </modules>
-        </profile>
-
-        <profile>
-            <id>7</id>
-            <modules>
-                <module>existdb-set-password-version-7.x.x</module>
-            </modules>
-        </profile>
-    </profiles>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>eu.somatik.serviceloader-maven-plugin</groupId>
+                <artifactId>serviceloader-maven-plugin</artifactId>
+                <configuration>
+                    <services>
+                        <param>com.evolvedbinary.existdb.util.setpassword.DatabaseProvider</param>
+                    </services>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

@@ -87,6 +87,18 @@
 
     <profiles>
         <profile>
+            <id>4</id>
+            <dependencies>
+                <dependency>
+                    <groupId>${project.groupId}</groupId>
+                    <artifactId>existdb-set-password-version-4.x.x</artifactId>
+                    <version>${project.version}</version>
+                    <scope>runtime</scope>
+                </dependency>
+            </dependencies>
+        </profile>
+
+        <profile>
             <id>5</id>
             <dependencies>
                 <dependency>
